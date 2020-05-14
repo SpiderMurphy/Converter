@@ -1,0 +1,27 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation project(":currency-domain")
+    implementation libraries.rxJava
+    implementation libraries.rxAndroid
+    implementation libraries.moshi
+    implementation libraries.moshiConverter
+    implementation libraries.moshiKotlin
+    implementation libraries.retrofit
+    implementation libraries.rxRetrofit
+    implementation libraries.koinCore
+
+    testImplementation libraries.mockitoCore
+    testImplementation libraries.mockitoKotlin
+    testImplementation libraries.junit
+
+    kapt libraries.moshiKotlinCodegen
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"

@@ -1,0 +1,31 @@
+ext.versions = [
+    rxAndroid       : '2.1.1',
+    rxJava          : '2.2.19',
+    retrofit        : '2.8.1',
+    rxRetrofit      : '2.8.1',
+    mockito         : '3.0.0',
+    mockitoKotlin   : '2.0.0',
+    moshi           : '1.9.2',
+    moshiConverter  : '2.8.1',
+    junit           : '4.13',
+    koin            : '2.1.5'
+]
+
+ext.libraries = [
+        rxJava              : "io.reactivex.rxjava2:rxjava:$versions.rxJava",
+        rxAndroid           : "io.reactivex.rxjava2:rxandroid:$versions.rxAndroid",
+        retrofit            : "com.squareup.retrofit2:retrofit:$versions.retrofit",
+        rxRetrofit          : "com.squareup.retrofit2:adapter-rxjava2:$versions.rxRetrofit",
+        mockitoCore         : "org.mockito:mockito-core:$versions.mockito",
+        mockitoInline       : "org.mockito:mockito-inline:$versions.mockito",
+        mockitoKotlin       : "com.nhaarman:mockito-kotlin-kt1.1:1.6.0",
+        mockitoAndroid      : "org.mockito:mockito-android:$versions.mockito",
+        moshi               : "com.squareup.moshi:moshi:$versions.moshi",
+        moshiAdapters       : "com.squareup.moshi:moshi-adapters:$versions.moshi",
+        moshiKotlinCodegen  : "com.squareup.moshi:moshi-kotlin-codegen:$versions.moshi",
+        moshiKotlin         : "com.squareup.moshi:moshi-kotlin:$versions.moshi",
+        moshiConverter      : "com.squareup.retrofit2:converter-moshi:$versions.moshiConverter",
+        junit               : "junit:junit:$versions.junit",
+        koinCore            : "org.koin:koin-core:$versions.koin",
+        koinAndroidScope    : "org.koin:koin-android-scope:$versions.koin"
+]

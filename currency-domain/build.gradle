@@ -1,0 +1,17 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation libraries.rxJava
+    implementation libraries.koinCore
+
+    testImplementation libraries.mockitoCore
+    testImplementation libraries.mockitoKotlin
+    testImplementation libraries.junit
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"

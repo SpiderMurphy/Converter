@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Rates</string>
+    <string name="rate_item_edit_text_hint">0</string>
+    <string name="rate_item_edit_text_default_value">1.0</string>
+</resources>

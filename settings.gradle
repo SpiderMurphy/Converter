@@ -1,0 +1,5 @@
+rootProject.name='Currency'
+include ':app'
+include ':currency-domain'
+include ':currency-data'
+include ':common-mvi'
