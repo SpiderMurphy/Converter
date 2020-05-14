@@ -1,10 +1,12 @@
 package com.revolut.currency_data.repository
 
 import com.nhaarman.mockito_kotlin.any
+import com.nhaarman.mockito_kotlin.mock
 import com.nhaarman.mockito_kotlin.whenever
 import com.revolut.currency_data.api.RatesApi
 import com.revolut.currency_data.models.BackEndCurrencies
 import com.revolut.currency_data.repository.cache.RatesCache
+import com.revolut.currency_domain.models.Rates
 import com.revolut.currency_domain.repository.RatesRepository
 import io.reactivex.Completable
 import io.reactivex.Single
@@ -33,9 +35,11 @@ class RatesRepositoryImplTest {
         // given
         val baseCurrency = "EUR"
         val returnedCurrency = "USD" to 1.2
+        val rates = mock<Rates>()
         whenever(ratesApiMock.getRates(baseCurrency)).thenReturn(
             Single.just(BackEndCurrencies(baseCurrency, mapOf(returnedCurrency)))
         )
+        whenever(ratesCacheMock.getCache()).thenReturn(Single.just(mapOf(baseCurrency to rates)))
 
         // when
         val testObserver = ratesRepository.getRates(baseCurrency).test()
